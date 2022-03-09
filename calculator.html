@@ -1,0 +1,158 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Integrated Action</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="template.css" rel="stylesheet">
+</head>
+<body class="banner1">
+<script>
+function add() {
+var num1 = parseInt(document.getElementById('t1').value);
+var num2 = parseInt(document.getElementById('t2').value);
+var sum = num1 + num2;
+document.getElementById('sum').value = sum;
+}
+function subtract(){
+var num1 = parseInt(document.getElementById('t1').value);
+var num2 = parseInt(document.getElementById('t2').value);
+var sum = num1 - num2;
+document.getElementById('sum').value = sum;
+}
+function multiply(){
+var num1 = parseInt(document.getElementById('t1').value);
+var num2 = parseInt(document.getElementById('t2').value);
+var sum = num1 * num2;
+document.getElementById('sum').value = sum;
+}
+function divd(){
+var num1 = parseInt(document.getElementById('t1').value);
+var num2 = parseInt(document.getElementById('t2').value);
+var sum = num1 / num2;
+document.getElementById('sum').value = sum.toFixed(2);
+}
+</script>
+<div class="calculator">
+<h1>SIMPLE CALCULATOR</h1>
+<form id="calc">
+<input id="t1" type="text" placeholder="Enter first number">
+<input id="t2" type="text" placeholder="Enter second number">
+<input id="sum" type="text" placeholder="Result" readonly>
+</form>
+<button onclick="add()">+ Add</button>
+<button onclick="subtract()">- Subtract</button>
+<button onclick="multiply()">* Multiply</button>
+<button onclick="divd()">/ Divide</button>
+<button onclick="document.getElementById('calc').reset()">CLEAR</button>
+</div>
+<script>
+function bmi() {
+var w = parseFloat(document.getElementById('weight').value);
+var h = parseFloat(document.getElementById('height').value);
+var b = (w/(h*h))*10000;
+document.getElementById('b').value = b.toFixed(1);
+if (b<18){
+document.getElementById('bi').value="UnderWeight";
+}
+else if (b>18 && b<25){
+document.getElementById('bi').value="Normal";
+}
+else if (b>25 && b<30){
+document.getElementById('bi').value="OverWeight";
+}
+else if (b>30){
+document.getElementById('bi').value="Obese";
+}
+}
+</script>
+<div class="bmi">
+<h1>BODY MASS INDEX</h1>
+<form id="bim">
+<input id="weight" type="text" onkeyup="bmi()" placeholder="Enter your weight (in kg)">
+<input id="height" type="text" onkeyup="bmi()" placeholder="Enter your height (in cm)">
+<div class="bmiresult">
+    <input id="b" type="text" readonly>
+<input id="bi" type="text" readonly>
+</div>
+</form>
+<button onclick="document.getElementById('bim').reset()">CLEAR</button>
+</div>
+<script>
+function check(){
+var i1=document.getElementById('item1').value;
+var i2=document.getElementById('item2').value;
+if (i1==='USD' && i2==='INR'){
+usdinr();
+}
+else if (i1==='USD' && i2==='KWD'){
+usdkwd();
+}
+else if (i1==='INR' && i2==='USD'){
+inrusd();
+}
+else if (i1==='INR' && i2==='KWD'){
+inrkwd();
+}
+else if (i1==='KWD' && i2==='INR'){
+kwdinr();
+}
+else if (i1==='KWD' && i2==='USD'){
+kwdusd();
+}
+else
+{
+var amt = parseInt(document.getElementById('amount').value);
+document.getElementById('result').value = amt; }
+function usdkwd() {
+var usd = parseInt(document.getElementById('amount').value);
+var kwd = usd * 0.30;
+document.getElementById('result').value = kwd;
+}
+function usdinr() {var usd = parseInt(document.getElementById('amount').value);
+var inr = usd * 75;
+document.getElementById('result').value = inr;
+}
+function kwdusd() {
+var kwd = parseInt(document.getElementById('amount').value);
+var usd = kwd * 3.31;
+document.getElementById('result').value = usd;
+}
+function kwdinr() {
+var kwd = parseInt(document.getElementById('amount').value);
+var inr = kwd * 248;
+document.getElementById('result').value = inr;
+}
+function inrusd() {
+var inr = parseInt(document.getElementById('amount').value);
+var usd = inr * 0.013;
+document.getElementById('result').value = usd;
+}
+function inrkwd() {
+var inr = parseInt(document.getElementById('amount').value);
+var kwd = inr * 0.0040;
+document.getElementById('result').value = kwd;
+}
+}
+</script>
+<div class="currency">
+<h1>CURRENCY CONVERTER</h1>
+<form id="crnc">
+<select id="item1">
+<option disabled selected>--Select From Currency--</option>
+<option>USD</option>
+<option>INR</option>
+<option>KWD</option>
+</select>
+<input id="amount" type="text" placeholder="Enter your amount">
+<select id="item2">
+<option disabled selected>--Select To Currency--</option>
+<option>USD</option>
+<option>INR</option>
+<option>KWD</option>
+</select>
+<input id="result" type="text" placeholder="Result" readonly="">
+</form>
+<button onclick="check()">Convert</button>
+<button onclick="document.getElementById('crnc').reset()">CLEAR</button>
+</div>
+</body></html>

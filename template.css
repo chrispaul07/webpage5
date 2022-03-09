@@ -1,0 +1,121 @@
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+font-family: Times New Roman;
+}
+.banner1{
+height: 1230px;
+background-image: url('img1.jpg');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+}
+* h1{
+text-align: center;
+margin-top: 8px;
+margin-bottom: 20px;
+font-family: "Century Gothic";
+color: black;
+font-size: 30px;
+}
+.calculator{
+height: 350px;
+width: 580px;
+background-color: #cccccc;
+position: absolute;
+left: 450px;
+top: 50px;
+border-radius: 20px;
+box-shadow: 1px 1px 12px #ffffff;
+padding: 25px;
+}
+.bmi{
+height: 270px;
+width: 580px;
+background-color: #cccccc;;
+position: absolute;
+left: 450px;
+top: 465px;
+border-radius: 20px;
+box-shadow: 1px 1px 12px #ffffff;
+padding: 25px;
+}
+.bmi button{
+width: 70px;
+left: 240px;
+}
+.bmiresult{
+height: 160px;
+width: 350px;
+position: absolute;
+left: 350px;
+top: 75px;
+border-radius: 20px;
+font-size: 25px;
+}
+.currency{
+height: 350px;
+width: 580px;
+background-color: #cccccc;;
+position: absolute;
+left: 450px;
+top: 800px;
+border-radius: 20px;
+box-shadow: 1px 1px 12px #ffffff;
+padding: 25px;
+}
+.currency button{
+width: 70px;
+left: 190px;
+}
+.currency select{
+height: 30px;
+font-size: 15px;
+background-color: white;
+border: none;
+border-radius: 10px;
+width: 210px;
+text-align: center;
+}
+button{
+height: 25px;
+font-size: 18px;
+background-color: white;
+border: none;
+border-radius: 8px;
+margin-top: 20px;
+width: 100px;
+margin: auto;
+position: relative;
+margin-bottom: 70px;
+}
+button:hover{
+background-color: #909090;
+}
+input[type="text"] {
+border: none;
+background-color: gray;
+outline: none;
+border-radius: 10px;
+font-size: 18px;
+margin-top: 15px;
+padding: 12px;
+display: block;
+margin-bottom: 20px;
+width:100%;
+}
+input[type="text"]:focus{
+outline: 1px solid #330033;
+background-color: white;
+}
+input[type="text"]:hover{
+background-color: #333333;
+}
+::placeholder{
+color:white;
+}
+.bmi input{
+width: 60%;
+}
